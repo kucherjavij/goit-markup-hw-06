@@ -460,7 +460,7 @@ p {
   align-items: center;
   justify-content: center;
   width: 170px;
-  height: 95px;
+  height: 92px;
   border: 1px solid var(--icons-fill);
   box-sizing: border-box;
   border-radius: 4px;
@@ -482,8 +482,6 @@ p {
 
 .clients-icon-svg {
   fill: var(--icons-fill);
-  width: 106px;
-  height: 60px;
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -529,11 +527,15 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-
+  outline: none;
   font-size: 16px;
   line-height: 1.25;
 
   color: rgba(255, 255, 255, 0.6);
+}
+
+.subsribe-field:focus {
+  border-color: var(--accent-color);
 }
 
 .subscribe-title {
@@ -853,8 +855,8 @@ p {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-svg:focus,
-.modal-close-svg:hover {
+.modal-close-btn:focus .modal-close-svg,
+.modal-close-btn:hover .modal-close-svg {
   fill: var(--accent-color);
 }
 
@@ -872,7 +874,7 @@ p {
   position: absolute;
   left: 14px;
   top: 50%;
-  transform: translateY(-50%);
+
   display: inline-block;
   fill: var(--titles-color);
   transition-property: fill;
@@ -932,14 +934,19 @@ p {
 }
 
 .checkbox-label {
+  display: flex;
+  align-items: center;
   margin-top: 20px;
-  display: block;
-  margin-bottom: 30px;
+}
+
+.modal-btn {
+  margin-top: 30px;
 }
 
 .checkbox-label::before {
   content: "";
   display: inline-block;
+  margin-right: 7px;
   width: 16px;
   height: 16px;
   border: 2px solid var(--logo-black-cl);
